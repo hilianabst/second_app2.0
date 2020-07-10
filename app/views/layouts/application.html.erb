@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
   <head>
     <title>SecondApp</title>
@@ -6,10 +6,19 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <%= yield %>
+  <body class="no-sidebar is-preload">
+
+   			<!-- Nav -->
+				<%= render partial: 'layouts/navbar'  %>
+            <!-- Main -->
+              <div class="wrapper style1">
+                  <%= yield %>
+              </div>
+			<!-- footer -->
+			<%= render partial: 'layouts/footer'  %>
+
   </body>
-</html>
+  <%= javascript_include_tag 'application'%>
+</html> 
